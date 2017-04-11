@@ -1,0 +1,21 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - apt-get update -y
+      - pip install pep8 requests pyyaml
+  pre_build:
+    commands:
+      - printenv
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - pep8 application --exclude=migrations,management,local_settings --max-line-length=150
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - ./**
