@@ -4,7 +4,6 @@ phases:
   install:
     commands:
       - echo Do nothing
-      - false
   pre_build:
     commands:
       - printenv
