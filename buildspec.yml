@@ -3,8 +3,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - apt-get update -y
-      - pip install pep8 requests pyyaml
+      - echo Do nothing
   pre_build:
     commands:
       - printenv
